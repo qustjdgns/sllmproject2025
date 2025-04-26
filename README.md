@@ -7,7 +7,7 @@ google/gemma-2-2b-it
 --------
 # 해결 방법
 
-## google/gemma-2-2b-it와 비슷하거나  보다 우수 성능을 가진 한국어 기반 학습 모델 탐색
+## google/gemma-2-2b-it와 비슷하거나 보다 우수 성능을 가진 한국어 기반 학습 모델 탐색
   
 https://huggingface.co/spaces/upstage/open-ko-llm-leaderboard
 
@@ -51,14 +51,22 @@ https://huggingface.co/spaces/upstage/open-ko-llm-leaderboard
 ![스크린샷 2025-04-26 223929](https://github.com/user-attachments/assets/d5952cbc-663c-4414-99df-27e3f5181474)
 
 
+--------
+# maywell/Synatra-42dot-1.3B 테스트
 
+## 문제점
 
+응답 :
+임진왜란에서 큰 공을 세웠습니다. 그는 1545년(조선 선조 28)에 태어나 1609년에 사망했습니다. 그의 주요 업적 중 하나는 거북선을 건조한 것입니다.
 
+- 간략하게 요약된 정보만 전달하는 경향이 있고, 질문에 대한 설명이나 배경이 빈약함
+- 대화형 챗봇치곤 말투가 사용자 친화적이 아님.
+  
+## 해결방안
 
+프롬프트 추가 :
 
-
-
-
+당신은 인공지능 챗봇입니다. 다음 질문에 대해 친근하고 자연스러운 말투로 명확하고 체계적인 답변을 제공하세요. 각 항목은 짧고 부드럽게 연결하며, 필요한 경우 친절하고 상세하게 설명해 주세요.
 
 
 
