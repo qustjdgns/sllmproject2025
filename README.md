@@ -105,8 +105,10 @@ def clean_response(prompt: str, decoded_output: str) -> str:
 
 ![dg](https://github.com/user-attachments/assets/f2ff93f5-4fd1-4a3d-a6e5-6b30db61b3e9)
 
+
+
 1592년 4월 13일 일본군에게 포위된 한산도대첩에서 승리하여 전쟁을 승리로 이끌었습니다.-> 1592년 7월 한산도대첩에서 일본 수군을 크게 무찌르며 전세를 뒤집었습니다.
-를 제외하면 대체로 정확한 정보를 약 40초 이내에 응답하고 있음.
+를 제외하면 대체로 정확한 정보를 깔금한 문장으로 구성하여 약 40초 이내에 응답하고 있음.
 
 
 # 결론
