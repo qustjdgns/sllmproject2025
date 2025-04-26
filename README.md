@@ -157,8 +157,9 @@ model = AutoModelForCausalLM.from_pretrained(
 # 응답 클리닝 함수
 def clean_response(prompt: str, decoded_output: str) -> str:
     response = decoded_output.replace(prompt, "").strip()
-    if response.startswith("요."):
-        response = response[2:].strip()
+    # 이모지, 요, 요., 요.! 등을 전부 제거
+    response = re.sub(r"^[\W_]*요[.!]*", "", response).strip()
+    # 시작이 '-'이면 제거
     if response.startswith("-"):
         response = response[1:].strip()
     return response
