@@ -1,11 +1,13 @@
 # 문제점
 google/gemma-2-2b-it
 - 빠르고 가볍게 쓸 때는 훌륭하지만, 영어기반 LLM모델의 한계로 한국어 작업에는 어려움을 느낌.
-- 
-  
+- 감성 표현, 친근한 말투에 약함,Gemma는 포멀하고 기계적인 톤.
+- 블로그 글쓰기, 감성 짧은 글쓰기, 상상력 필요한 답변, Gemma는 기계적이고 뻔한 문장을 만들어냄.
+
+
 # 해결 방법
 
-- google/gemma-2-2b-it와 비슷한 성능을 가진 한국어 기반 학습 모델 탐색
+- google/gemma-2-2b-it와 비슷하거나  보다 우수 성능을 가진 한국어 기반 학습 모델 탐색
   
 https://huggingface.co/spaces/upstage/open-ko-llm-leaderboard
 
@@ -29,7 +31,7 @@ Ko-CommonGen v2: 한국어 상식 기반의 문장 생성 능력을 평가합니
 
 3. 다양한 모델 참여
 2024년 말 기준으로 1,000개 이상의 모델이 등록되어 있으며, 이는 한국어 LLM 개발에 대한 높은 관심과 활발한 참여를 반영합니다.​
-upstage.ai
+
 
 # maywell/Synatra-42dot-1.3B 모델이란?
 
