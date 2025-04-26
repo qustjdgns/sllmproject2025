@@ -34,6 +34,20 @@ https://huggingface.co/spaces/upstage/open-ko-llm-leaderboard
 3. 다양한 모델 참여
 2024년 말 기준으로 1,000개 이상의 모델이 등록되어 있으며, 이는 한국어 LLM 개발에 대한 높은 관심과 활발한 참여를 반영합니다.​
 
+| 모델 | 평균 (Average) | Ko-GPQA | Ko-Winogrande | Ko-GSM8k | Ko-EQ Bench | Ko-IFEval | KorNAT-CKA | KorNAT-SVA | Ko-Harmlessness |
+|:---|:---|:---|:---|:---|:---|:---|:---|:---|:---|
+| maywell/Synatra-42dot-1.3B | 31.66 | 24.75 | 55.41 | 2.05 | 0 | 22.65 | 27.31 | 51.01 | 60.44 |
+| DILAB-HYU/koquality-polyglot-1.3b | 31.07 | 28.28 | 51.3 | 0.08 | 0 | 25.21 | 24.92 | 51.01 | 59.55 |
+| jungyuko/DAVinCI-42dot_LLM-PLM-1.3B-v1.5.3 | 30.93 | 29.8 | 52.09 | 0 | 0 | 14.85 | 31.94 | 51.01 | 64.22 |
+| cpm-ai/gemma-ko-v01 | 30.78 | 21.21 | 49.17 | 0.61 | -0.64 | 28.2 | 22.67 | 47.34 | 65.45 |
+| Qwen/Qwen2.5-0.5B-Instruct | 30.61 | 21.72 | 51.62 | 0.38 | 1.65 | 25.65 | 14.71 | 50.64 | 62.15 |
+| DooDooHyun/AIFT-42dot_LLM-PLM-1.3B-v1.51 | 30.43 | 27.78 | 54.06 | 0 | 0 | 12.51 | 30.41 | 51.01 | 63.31 |
+| heegyu/polyglot-ko-1.3b-chat | 30.19 | 25.76 | 51.14 | 0 | 0 | 24.43 | 18.97 | 50.63 | 59.99 |
+| Edentns/DataVortexTL-1.1B-v0.1 | 30.04 | 22.73 | 50.91 | 0.99 | 0.47 | 21.32 | 13.1 | 50.83 | 61.73 |
+| heegyu/42dot_LLM-PLM-1.3B-mt | 29.99 | 22.22 | 52.8 | 0.08 | 0 | 27.37 | 14.55 | 51.01 | 60.09 |
+| Leejy0-0/gemma-2b-it-sum-ko | 29.99 | 20.71 | 51.38 | 0.08 | 0 | 28.59 | 15.18 | 50.61 | 64.75 |
+
+
 --------
 # maywell/Synatra-42dot-1.3B 모델이란?
 
