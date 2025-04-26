@@ -86,22 +86,32 @@ model.generate() 반복억제, 3단어 이상 반복 금지 기능 활성화
 
 ## 수정방안
 
- def clean_response(system_prompt: str, decoded_output: str) -> str:
-        # system_prompt를 지워야 함
-        if system_prompt in decoded_output:
-            response = decoded_output.replace(prompt, "").strip()
-        else:
-            response = decoded_output.strip()
-        return response
+
+def clean_response(prompt: str, decoded_output: str) -> str:
+    response = decoded_output.replace(prompt, "").strip()
+    if response.startswith("요."):
+        response = response[2:].strip()
+    if response.startswith("-"):
+        response = response[1:].strip()
+    return response
 
 응답에 불필요한 요소를 제거하는 함수를 추가하여 깔끔하게 응답이 출력됨.
 
 
 
+# 출력 예시
 
 
+![dg](https://github.com/user-attachments/assets/f2ff93f5-4fd1-4a3d-a6e5-6b30db61b3e9)
+
+1592년 4월 13일 일본군에게 포위된 한산도대첩에서 승리하여 전쟁을 승리로 이끌었습니다.-> 1592년 7월 한산도대첩에서 일본 수군을 크게 무찌르며 전세를 뒤집었습니다.
+를 제외하면 대체로 정확한 정보를 약 40초 이내에 응답하고 있음.
 
 
+# 결론
+- gamma2 보단 한국어에 강점을 보이나 추론능력이 살짝 아쉽게 느껴짐
+- 하지만 빠른속도를 감안하면 성능에 대체로 만족
+- 추후 추론 능력과 지식 학습을 강화하면 경량화 모델 중에선 견줄 상대가 없어보임
 
 # main.py
 
