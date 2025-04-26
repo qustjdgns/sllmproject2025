@@ -50,12 +50,10 @@ https://huggingface.co/spaces/upstage/open-ko-llm-leaderboard
 
 ![스크린샷 2025-04-26 223929](https://github.com/user-attachments/assets/d5952cbc-663c-4414-99df-27e3f5181474)
 
+    python torch_dtype=torch.float16).to("cuda")
+    torch_dtype=torch.float16 
 
-
-    torch_dtype=torch.float16
-).to("cuda")
-
-torch_dtype=torch.float16은 모델의 파라미터를 16비트 부동소수점 형식으로 변환하여 메모리 사용을 줄이고 연산 속도를 높입니다. .to("cuda")는 모델을 GPU로 이동시켜 연산 성능을 향상시킵니다.
+- 모델의 파라미터를 16비트 부동소수점 형식으로 변환하여 메모리 사용을 줄이고 연산 속도를 높입니다. .to("cuda")는 모델을 GPU로 이동시켜 연산 성능을 향상시킵니다.
 
 
 --------
