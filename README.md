@@ -7,11 +7,11 @@ google/gemma-2-2b-it
 
 # 해결 방법
 
-- google/gemma-2-2b-it와 비슷하거나  보다 우수 성능을 가진 한국어 기반 학습 모델 탐색
+google/gemma-2-2b-it와 비슷하거나  보다 우수 성능을 가진 한국어 기반 학습 모델 탐색
   
 https://huggingface.co/spaces/upstage/open-ko-llm-leaderboard
 
-- Open Ko-LLM Leaderboard는 한국어 대형 언어 모델(LLM)의 성능을 객관적으로 평가하기 위해 Upstage와 한국정보화진흥원(NIA)이 공동으로 구축한 평가 플랫폼
+ Open Ko-LLM Leaderboard는 한국어 대형 언어 모델(LLM)의 성능을 객관적으로 평가하기 위해 Upstage와 한국정보화진흥원(NIA)이 공동으로 구축한 평가 플랫폼
 
 1. 한국어 특화 평가 지표
 영어 중심의 기존 LLM 평가 지표의 한계를 극복하기 위해, 한국어의 문법, 어휘, 문화적 맥락을 반영한 평가 지표를 개발하여 사용합니다.
