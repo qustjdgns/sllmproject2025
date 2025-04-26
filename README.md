@@ -6,10 +6,8 @@ google/gemma-2-2b-it
 - 블로그 글쓰기, 감성 짧은 글쓰기, 상상력 필요한 답변, Gemma는 기계적이고 뻔한 문장을 만들어냄.
 
 --------
-# 해결 방법
+# 해결 방법 - google/gemma-2-2b-it 보다 우수한 성능을 가진 한국어 기반 학습 모델 탐색
 
-## google/gemma-2-2b-it 보다 우수한 성능을 가진 한국어 기반 학습 모델 탐색
-  
 https://huggingface.co/spaces/upstage/open-ko-llm-leaderboard
 
  Open Ko-LLM Leaderboard는 한국어 대형 언어 모델(LLM)의 성능을 객관적으로 평가하기 위해 Upstage와 한국정보화진흥원(NIA)이 공동으로 구축한 평가 플랫폼
