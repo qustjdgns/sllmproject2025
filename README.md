@@ -42,6 +42,8 @@ https://huggingface.co/spaces/upstage/open-ko-llm-leaderboard
 | heegyu/42dot_LLM-PLM-1.3B-mt | 29.99 | 22.22 | 52.8 | 0.08 | 0 | 27.37 | 14.55 | 51.01 | 60.09 |
 | Leejy0-0/gemma-2b-it-sum-ko | 29.99 | 20.71 | 51.38 | 0.08 | 0 | 28.59 | 15.18 | 50.61 | 64.75 |
 
+- maywell/Synatra-42dot-1.3B 0~3b 모델 중 가장 점수가 높은 한국어 기반 학습 모델.
+
 
 --------
 # maywell/Synatra-42dot-1.3B 모델이란?
