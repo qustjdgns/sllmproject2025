@@ -1,4 +1,5 @@
 # 문제점
+
 google/gemma-2-2b-it
 - 빠르고 가볍게 쓸 때는 훌륭하지만, 영어기반 LLM모델의 한계로 한국어 작업에는 어려움을 느낌.
 - 감성 표현, 친근한 말투에 약함,Gemma는 포멀하고 기계적인 톤.
@@ -79,6 +80,7 @@ https://huggingface.co/spaces/upstage/open-ko-llm-leaderboard
             top_p=0.9
 ```
 model.generate() 반복억제, 3단어 이상 반복 금지 기능 활성화
+
 ---
 
 ## 2.문제점
@@ -98,7 +100,7 @@ def clean_response(prompt: str, decoded_output: str) -> str:
 ```
 응답에 불필요한 요소를 제거하는 함수를 추가하여 깔끔하게 응답이 출력됨.
 
-
+----
 
 # 출력 예시
 
