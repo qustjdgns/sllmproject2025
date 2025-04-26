@@ -43,7 +43,7 @@ https://huggingface.co/spaces/upstage/open-ko-llm-leaderboard
 | Leejy0-0/gemma-2b-it-sum-ko | 29.99 | 20.71 | 51.38 | 0.08 | 0 | 28.59 | 15.18 | 50.61 | 64.75 |
 
 - maywell/Synatra-42dot-1.3B 0~3b 모델 중 가장 점수가 높은 한국어 기반 학습 모델.
-
+- 하단의 gamma2 기반으로 한 파인튜닝보다 높은 점수를 기록.
 
 --------
 # maywell/Synatra-42dot-1.3B 모델이란?
