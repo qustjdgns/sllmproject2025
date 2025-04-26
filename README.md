@@ -7,7 +7,7 @@ google/gemma-2-2b-it
 --------
 # 해결 방법
 
-- google/gemma-2-2b-it와 비슷하거나  보다 우수 성능을 가진 한국어 기반 학습 모델 탐색
+## google/gemma-2-2b-it와 비슷하거나  보다 우수 성능을 가진 한국어 기반 학습 모델 탐색
   
 https://huggingface.co/spaces/upstage/open-ko-llm-leaderboard
 
