@@ -53,3 +53,101 @@ https://huggingface.co/spaces/upstage/open-ko-llm-leaderboard
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# main.py
+
+```python
+import os
+import torch
+from fastapi import FastAPI
+from fastapi.middleware.cors import CORSMiddleware
+from pydantic import BaseModel
+from transformers import AutoTokenizer, AutoModelForCausalLM
+import uvicorn
+
+os.environ['HF_TOKEN'] = ""
+
+app = FastAPI()
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+
+tokenizer = AutoTokenizer.from_pretrained("maywell/Synatra-42dot-1.3B")
+model = AutoModelForCausalLM.from_pretrained(
+    "maywell/Synatra-42dot-1.3B",
+    torch_dtype=torch.float16
+).to("cuda")
+
+def generate_gemma_response(prompt: str) -> str:
+    system_prompt = f"당신은 인공지능 챗봇입니다. 다음 질문에 대해 정확히 이해한 후, 명확한 정보를 항목별로 체계적이고 자세하게 설명하세요.\n질문: {prompt}\n답변:"
+
+    inputs = tokenizer(system_prompt, return_tensors="pt")
+    inputs = {k: v.to("cuda") for k, v in inputs.items()}
+    with torch.no_grad():
+        outputs = model.generate(
+            **inputs,
+            max_length=1024,
+            pad_token_id=tokenizer.eos_token_id,
+            repetition_penalty=1.2,
+            no_repeat_ngram_size=3,
+            temperature=0.7,
+            top_p=0.9
+        )
+
+    def clean_response(system_prompt: str, decoded_output: str) -> str:
+        if system_prompt in decoded_output:
+            response = decoded_output.replace(system_prompt, "").strip()
+        else:
+            response = decoded_output.strip()
+        return response
+
+    decoded = tokenizer.decode(outputs[0], skip_special_tokens=True)
+    final_response = clean_response(system_prompt, decoded)
+    return final_response
+
+class PromptRequest(BaseModel):
+    prompt: str
+
+@app.get("/")
+async def root():
+    return {"message": "Hello Chatting"}
+
+@app.post("/answer")
+async def answer(prompt_request: PromptRequest):
+    print(f"Received request: {prompt_request}")
+    prompt = prompt_request.prompt
+    result = generate_gemma_response(prompt)
+    return {"result": result}
+
+if __name__ == '__main__':
+    uvicorn.run(app, host='127.0.0.1', port=8000)
+
+
+
+
+
