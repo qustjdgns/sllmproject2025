@@ -52,9 +52,30 @@ https://huggingface.co/spaces/upstage/open-ko-llm-leaderboard
 
 
 --------
-# maywell/Synatra-42dot-1.3B 테스트
+# maywell/Synatra-42dot-1.3B 입력 조정
 
-## 문제점
+
+
+
+## 1.문제점
+
+초기에 아무것도 입력 조정 하지 않을 때 사용자의 질문을 받으면 같은 단어를 반복하고 max_length 길이가 짧다보니 단답형으로 응답합.
+
+## 수정방안
+
+outputs = model.generate(
+            **inputs,
+            max_length=1024,
+            pad_token_id=tokenizer.eos_token_id,
+            repetition_penalty=1.2,  #  반복 억제 추가
+            no_repeat_ngram_size=3,  #  3단어 이상 반복 금지
+            temperature=0.7,  #  다양성 확보
+            top_p=0.9
+
+model.generate() 반복억제, 3단어 이상 반복 금지 기능 활성화
+
+
+## 2.문제점
 
 응답 :
 임진왜란에서 큰 공을 세웠습니다. 그는 1545년(조선 선조 28)에 태어나 1609년에 사망했습니다. 그의 주요 업적 중 하나는 거북선을 건조한 것입니다.
@@ -62,18 +83,18 @@ https://huggingface.co/spaces/upstage/open-ko-llm-leaderboard
 - 간략하게 요약된 정보만 전달하는 경향이 있고, 질문에 대한 설명이나 배경이 빈약함
 - 대화형 챗봇치곤 말투가 사용자 친화적이 아님.
   
-## 수정 전
+## 수정 방안
 
 프롬프트 추가 :
 
 당신은 인공지능 챗봇입니다. 다음 질문에 대해 정확히 이해한 후, 항목별로 자세하고 정확하게 답변하세요
 
-
-## 수정 전
 ![스크린샷 2025-04-27 004222](https://github.com/user-attachments/assets/c0d6a6dd-75e3-4602-a1a7-72ae88495187)
 
 - 정보를 좀 더 풍부한 배경과 지식으로 설명하고 있음.
 - 1분 이내의 빠른 응답 속도를 보이고 있음.
+
+
 
 
 
