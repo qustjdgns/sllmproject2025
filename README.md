@@ -1,5 +1,3 @@
-# sllmproject2025
-
 
 # maywell/Synatra-42dot-1.3B 모델이란?
 
